@@ -96,3 +96,16 @@ function partition(list, predicate){
 
     return [truthArr,falseArr]; 
 }
+
+function compact(list){
+    const result = [];
+
+    for (let i=0 ; i < list.length ; i++){
+        if(list[i]){
+            result.push(list[i])
+        }
+    }
+    return result;
+}
+// let test = compact([0, 1, false, 2, '', 3]);
+// console.log(test);
