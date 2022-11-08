@@ -109,3 +109,18 @@ function compact(list){
 }
 // let test = compact([0, 1, false, 2, '', 3]);
 // console.log(test);
+
+function without(array){
+    const result = [];
+    const args = [...arguments];
+
+    for(let i = 0 ; i < array.length ; i++){
+        if(!args.includes(array[i])){
+            result.push(array[i])
+        }
+    }
+    return result;
+}
+
+// let test = without([1, 2, 1, 0, 3, 1, 4], 0, 1);
+// console.log(test);
