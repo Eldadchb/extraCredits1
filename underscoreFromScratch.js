@@ -84,9 +84,15 @@ function binarySearch(array, reqVal, start, end){
     } else {
 
         return binarySearch(array, reqVal, mid+1, end);
-
     }
 }
 
 // let test = indexOf([1,2,3,4,5,6,7,8,11,35,67,88,9000,10000], 35, true);
 // console.log(test);
+
+function partition(list, predicate){
+    const truthArr = _.reject(list, predicate);
+    const falseArr = _.filter(list, predicate);
+
+    return [truthArr,falseArr]; 
+}
