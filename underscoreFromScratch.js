@@ -124,3 +124,26 @@ function without(array){
 
 // let test = without([1, 2, 1, 0, 3, 1, 4], 0, 1);
 // console.log(test);
+
+
+function sample(list){
+    let args = [...arguments];
+    let numberOfVal = 1;
+    let range = list.length - 1;
+    let result = [];
+
+    if (args.length > 1){
+        numberOfVal = arguments[1];
+
+        for(let i = 0 ; i < numberOfVal ; i++){
+            result.push(list[Math.round(Math.random() * range)])
+        }
+        return result;
+
+    } else {
+        return list[Math.round(Math.random() * range)];
+    }
+}
+
+// let test = sample([1, 2, 3, 4, 5, 6], 4);
+// console.log(test);
